@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD51576B1ECC78B900BFD5CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD51576A1ECC78B900BFD5CD /* AppDelegate.swift */; };
+		DD51576F1ECC78B900BFD5CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD51576E1ECC78B900BFD5CD /* Assets.xcassets */; };
+		DD5157721ECC78B900BFD5CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD5157701ECC78B900BFD5CD /* Main.storyboard */; };
+		DD51577B1ECC78F900BFD5CD /* UniversalAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD51577A1ECC78F900BFD5CD /* UniversalAccess.framework */; };
+		DD51577E1ECC79AB00BFD5CD /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD51577D1ECC79AB00BFD5CD /* StatusItemController.swift */; };
+		DD5157841ECC7BE500BFD5CD /* Unsterificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5157831ECC7BE500BFD5CD /* Unsterificator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DD5157671ECC78B900BFD5CD /* Unsterificator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsterificator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD51576A1ECC78B900BFD5CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD51576E1ECC78B900BFD5CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD5157711ECC78B900BFD5CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD5157731ECC78B900BFD5CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD51577A1ECC78F900BFD5CD /* UniversalAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniversalAccess.framework; path = ../../../../../System/Library/PrivateFrameworks/UniversalAccess.framework; sourceTree = "<group>"; };
+		DD51577C1ECC791200BFD5CD /* Unsterificator_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Unsterificator_Bridging_Header.h; sourceTree = "<group>"; };
+		DD51577D1ECC79AB00BFD5CD /* StatusItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
+		DD5157831ECC7BE500BFD5CD /* Unsterificator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unsterificator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD5157641ECC78B900BFD5CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD51577B1ECC78F900BFD5CD /* UniversalAccess.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD51575E1ECC78B900BFD5CD = {
+			isa = PBXGroup;
+			children = (
+				DD5157691ECC78B900BFD5CD /* Unsterificator */,
+				DD5157681ECC78B900BFD5CD /* Products */,
+				DD5157791ECC78F800BFD5CD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DD5157681ECC78B900BFD5CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD5157671ECC78B900BFD5CD /* Unsterificator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD5157691ECC78B900BFD5CD /* Unsterificator */ = {
+			isa = PBXGroup;
+			children = (
+				DD5157821ECC79C300BFD5CD /* UI */,
+				DD5157801ECC79B700BFD5CD /* Bootstrap */,
+				DD51577F1ECC79AF00BFD5CD /* Resources */,
+				DD5157811ECC79BB00BFD5CD /* Core */,
+			);
+			path = Unsterificator;
+			sourceTree = "<group>";
+		};
+		DD5157791ECC78F800BFD5CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD51577A1ECC78F900BFD5CD /* UniversalAccess.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD51577F1ECC79AF00BFD5CD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DD51576E1ECC78B900BFD5CD /* Assets.xcassets */,
+				DD5157701ECC78B900BFD5CD /* Main.storyboard */,
+				DD5157731ECC78B900BFD5CD /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DD5157801ECC79B700BFD5CD /* Bootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				DD51576A1ECC78B900BFD5CD /* AppDelegate.swift */,
+			);
+			name = Bootstrap;
+			sourceTree = "<group>";
+		};
+		DD5157811ECC79BB00BFD5CD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DD51577C1ECC791200BFD5CD /* Unsterificator_Bridging_Header.h */,
+				DD5157831ECC7BE500BFD5CD /* Unsterificator.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		DD5157821ECC79C300BFD5CD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DD51577D1ECC79AB00BFD5CD /* StatusItemController.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD5157661ECC78B900BFD5CD /* Unsterificator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD5157761ECC78B900BFD5CD /* Build configuration list for PBXNativeTarget "Unsterificator" */;
+			buildPhases = (
+				DD5157631ECC78B900BFD5CD /* Sources */,
+				DD5157641ECC78B900BFD5CD /* Frameworks */,
+				DD5157651ECC78B900BFD5CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Unsterificator;
+			productName = Unsterificator;
+			productReference = DD5157671ECC78B900BFD5CD /* Unsterificator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD51575F1ECC78B900BFD5CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Guilherme Rambo";
+				TargetAttributes = {
+					DD5157661ECC78B900BFD5CD = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 8C7439RJLG;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DD5157621ECC78B900BFD5CD /* Build configuration list for PBXProject "Unsterificator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD51575E1ECC78B900BFD5CD;
+			productRefGroup = DD5157681ECC78B900BFD5CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD5157661ECC78B900BFD5CD /* Unsterificator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD5157651ECC78B900BFD5CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD51576F1ECC78B900BFD5CD /* Assets.xcassets in Resources */,
+				DD5157721ECC78B900BFD5CD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD5157631ECC78B900BFD5CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD5157841ECC7BE500BFD5CD /* Unsterificator.swift in Sources */,
+				DD51577E1ECC79AB00BFD5CD /* StatusItemController.swift in Sources */,
+				DD51576B1ECC78B900BFD5CD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DD5157701ECC78B900BFD5CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD5157711ECC78B900BFD5CD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD5157741ECC78B900BFD5CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DD5157751ECC78B900BFD5CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		DD5157771ECC78B900BFD5CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				INFOPLIST_FILE = Unsterificator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Unsterificator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Unsterificator/Unsterificator_Bridging_Header.h;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DD5157781ECC78B900BFD5CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8C7439RJLG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+				INFOPLIST_FILE = Unsterificator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.guilhermerambo.Unsterificator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Unsterificator/Unsterificator_Bridging_Header.h;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD5157621ECC78B900BFD5CD /* Build configuration list for PBXProject "Unsterificator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD5157741ECC78B900BFD5CD /* Debug */,
+				DD5157751ECC78B900BFD5CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD5157761ECC78B900BFD5CD /* Build configuration list for PBXNativeTarget "Unsterificator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD5157771ECC78B900BFD5CD /* Debug */,
+				DD5157781ECC78B900BFD5CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD51575F1ECC78B900BFD5CD /* Project object */;
+}
