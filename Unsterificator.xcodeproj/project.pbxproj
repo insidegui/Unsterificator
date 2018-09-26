@@ -351,6 +351,7 @@
 				DD5157781ECC78B900BFD5CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
