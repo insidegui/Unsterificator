@@ -90,7 +90,11 @@ final class StatusItemController: NSObject {
 
     private func shortcutToggle() {
         flashStatusItem()
+        
         toggle(nil)
+
+        let feedback: AudioFeedback = unsterificator.isUnsterified ? .mono : .stereo
+        feedback.play()
     }
 
     private func flashStatusItem() {

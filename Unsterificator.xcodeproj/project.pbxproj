@@ -18,6 +18,10 @@
 		F4E1554A2BB5AC47008354CD /* StatusItemMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E155492BB5AC47008354CD /* StatusItemMenu.swift */; };
 		F4E1554C2BB5B1B8008354CD /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1554B2BB5B1B8008354CD /* SettingsWindowController.swift */; };
 		F4E155512BB5B445008354CD /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = F4E155502BB5B445008354CD /* KeyboardShortcuts */; };
+		F4E155532BB5BCA2008354CD /* Feedback-Stereo.caf in Resources */ = {isa = PBXBuildFile; fileRef = F4E155522BB5BCA2008354CD /* Feedback-Stereo.caf */; };
+		F4E155552BB5BCAB008354CD /* AudioFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E155542BB5BCAB008354CD /* AudioFeedback.swift */; };
+		F4E1555C2BB5BDAD008354CD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1555B2BB5BDAD008354CD /* Settings.swift */; };
+		F4E1555E2BB5BEBA008354CD /* Feedback-Mono.caf in Resources */ = {isa = PBXBuildFile; fileRef = F4E1555D2BB5BEBA008354CD /* Feedback-Mono.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		F4E155452BB5AB7F008354CD /* NSMenu+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMenu+.swift"; sourceTree = "<group>"; };
 		F4E155492BB5AC47008354CD /* StatusItemMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemMenu.swift; sourceTree = "<group>"; };
 		F4E1554B2BB5B1B8008354CD /* SettingsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
+		F4E155522BB5BCA2008354CD /* Feedback-Stereo.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Feedback-Stereo.caf"; sourceTree = "<group>"; };
+		F4E155542BB5BCAB008354CD /* AudioFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFeedback.swift; sourceTree = "<group>"; };
+		F4E1555B2BB5BDAD008354CD /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		F4E1555D2BB5BEBA008354CD /* Feedback-Mono.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Feedback-Mono.caf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,8 @@
 		DD51577F1ECC79AF00BFD5CD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F4E155522BB5BCA2008354CD /* Feedback-Stereo.caf */,
+				F4E1555D2BB5BEBA008354CD /* Feedback-Mono.caf */,
 				DD51576E1ECC78B900BFD5CD /* Assets.xcassets */,
 				DD5157701ECC78B900BFD5CD /* Main.storyboard */,
 				DD5157731ECC78B900BFD5CD /* Info.plist */,
@@ -98,6 +108,7 @@
 		DD5157801ECC79B700BFD5CD /* Bootstrap */ = {
 			isa = PBXGroup;
 			children = (
+				F4E1555B2BB5BDAD008354CD /* Settings.swift */,
 				DD51576A1ECC78B900BFD5CD /* AppDelegate.swift */,
 			);
 			name = Bootstrap;
@@ -127,6 +138,7 @@
 				F4E155452BB5AB7F008354CD /* NSMenu+.swift */,
 				F4E155492BB5AC47008354CD /* StatusItemMenu.swift */,
 				F4E1554B2BB5B1B8008354CD /* SettingsWindowController.swift */,
+				F4E155542BB5BCAB008354CD /* AudioFeedback.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -200,6 +212,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4E1555E2BB5BEBA008354CD /* Feedback-Mono.caf in Resources */,
+				F4E155532BB5BCA2008354CD /* Feedback-Stereo.caf in Resources */,
 				DD51576F1ECC78B900BFD5CD /* Assets.xcassets in Resources */,
 				DD5157721ECC78B900BFD5CD /* Main.storyboard in Resources */,
 			);
@@ -213,6 +227,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD5157841ECC7BE500BFD5CD /* Unsterificator.swift in Sources */,
+				F4E155552BB5BCAB008354CD /* AudioFeedback.swift in Sources */,
+				F4E1555C2BB5BDAD008354CD /* Settings.swift in Sources */,
 				F4E1554A2BB5AC47008354CD /* StatusItemMenu.swift in Sources */,
 				F4E155462BB5AB7F008354CD /* NSMenu+.swift in Sources */,
 				DD51577E1ECC79AB00BFD5CD /* StatusItemController.swift in Sources */,

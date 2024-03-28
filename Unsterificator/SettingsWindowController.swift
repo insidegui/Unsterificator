@@ -43,11 +43,13 @@ extension KeyboardShortcuts.Name {
 
 struct SettingsScreen: View {
     @ObservedObject private var launchAtLogin = LaunchAtLogin.observable
+    @ObservedObject private var settings = Settings.current
 
     var body: some View {
         Form {
             Toggle("Launch at login", isOn: $launchAtLogin.isEnabled)
             KeyboardShortcuts.Recorder("Keyboard Shortcut", name: .toggleMonoAudio)
+            Toggle("Enable Feedback Sound", isOn: $settings.soundFeedbackEnabled)
         }
         .formStyle(.grouped)
         .frame(minWidth: 200, maxWidth: .infinity, minHeight: 200, maxHeight: .infinity)
