@@ -16,9 +16,9 @@ final class StatusItemController: NSObject {
     
     private var imageForCurrentState: NSImage {
         if unsterificator.isUnsterified {
-            return #imageLiteral(resourceName: "mono")
+            return .statusItemMono
         } else {
-            return #imageLiteral(resourceName: "stereo")
+            return .statusItemStereo
         }
     }
     
@@ -33,7 +33,7 @@ final class StatusItemController: NSObject {
     private lazy var menu: StatusItemMenu = {
         StatusItemMenu(actions: self)
     }()
-    
+
     func install() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         
