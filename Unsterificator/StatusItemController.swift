@@ -40,11 +40,11 @@ final class StatusItemController: NSObject {
     }()
     
     func install() {
-        statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
+        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         
-        statusItem.target = self
-        statusItem.action = #selector(menuIconClicked)
-        
+        statusItem.button?.target = self
+        statusItem.button?.action = #selector(menuIconClicked)
+
         updateStatus()
         
         unsterificator.settingDidChangeExternally = { [weak self] in
@@ -53,8 +53,8 @@ final class StatusItemController: NSObject {
     }
     
     private func updateStatus() {
-        statusItem.image = imageForCurrentState
-        statusItem.toolTip = "Unsterificator (\(descriptionForCurrentState))"
+        statusItem.button?.image = imageForCurrentState
+        statusItem.button?.toolTip = "Unsterificator (\(descriptionForCurrentState))"
     }
     
     @objc private func menuIconClicked(_ sender: Any?) {
