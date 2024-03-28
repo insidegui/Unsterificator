@@ -36,7 +36,6 @@ final class StatusItemController: NSObject {
     }()
 
     func install() {
-        menu.delegate = self
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
 
         guard let button = statusItem.button else {
@@ -134,16 +133,8 @@ fileprivate extension NSEvent {
 
 }
 
-extension StatusItemController: StatusItemMenuActions, NSMenuDelegate {
-    func menuDidClose(_ menu: NSMenu) {
-        print("menuDidClose")
-    }
-
+extension StatusItemController: StatusItemMenuActions {
     func presentSettings(_ sender: NSMenuItem) {
-        print("presentSettings called in mode \(String(describing: RunLoop.current.currentMode))")
-
-        sender.menu!.cancelTrackingWithoutAnimation()
-
         RunLoop.current.perform(inModes: [.default]) {
             self.showSettingsWindow()
         }

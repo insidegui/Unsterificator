@@ -52,6 +52,6 @@ struct SettingsScreen: View {
             Toggle("Enable Feedback Sound", isOn: $settings.soundFeedbackEnabled)
         }
         .formStyle(.grouped)
-        .frame(minWidth: 200, maxWidth: .infinity, minHeight: 200, maxHeight: .infinity)
+        .frame(minWidth: 200, maxWidth: .infinity, minHeight: 160, maxHeight: .infinity)
     }
 }
