@@ -2,7 +2,7 @@ import Cocoa
 
 protocol StatusItemMenuActions {
     func toggleLaunchAtLogin(_ sender: NSMenuItem)
-    func configureKeyboardShortcut(_ sender: NSMenuItem)
+    func presentSettings(_ sender: NSMenuItem)
     func terminate(_ sender: NSMenuItem)
 }
 
@@ -16,7 +16,7 @@ final class StatusItemMenu: NSMenu {
         super.init(title: "Unsterificator")
 
         addItem(withTitle: "Launch At Login", target: self, action: #selector(toggleLaunchAtLogin))
-        addItem(withTitle: "Keyboard Shortcut…", target: self, action: #selector(configureKeyboardShortcut))
+        addItem(withTitle: "Settings…", target: self, action: #selector(configureKeyboardShortcut))
         
         addSeparator()
         
@@ -40,7 +40,7 @@ final class StatusItemMenu: NSMenu {
             assertionFailure("Expected menu item action sender to me NSMenuItem")
             return
         }
-        actions.configureKeyboardShortcut(sender)
+        actions.presentSettings(sender)
     }
 
     @objc private func terminate(_ sender: Any?) {

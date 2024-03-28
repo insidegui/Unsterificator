@@ -16,6 +16,7 @@
 		F4E155432BB5AB40008354CD /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = F4E155422BB5AB40008354CD /* LaunchAtLogin */; };
 		F4E155462BB5AB7F008354CD /* NSMenu+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E155452BB5AB7F008354CD /* NSMenu+.swift */; };
 		F4E1554A2BB5AC47008354CD /* StatusItemMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E155492BB5AC47008354CD /* StatusItemMenu.swift */; };
+		F4E1554C2BB5B1B8008354CD /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1554B2BB5B1B8008354CD /* SettingsWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DD5157831ECC7BE500BFD5CD /* Unsterificator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unsterificator.swift; sourceTree = "<group>"; };
 		F4E155452BB5AB7F008354CD /* NSMenu+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMenu+.swift"; sourceTree = "<group>"; };
 		F4E155492BB5AC47008354CD /* StatusItemMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemMenu.swift; sourceTree = "<group>"; };
+		F4E1554B2BB5B1B8008354CD /* SettingsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				F4E155452BB5AB7F008354CD /* NSMenu+.swift */,
 				F4E155492BB5AC47008354CD /* StatusItemMenu.swift */,
+				F4E1554B2BB5B1B8008354CD /* SettingsWindowController.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				F4E1554A2BB5AC47008354CD /* StatusItemMenu.swift in Sources */,
 				F4E155462BB5AB7F008354CD /* NSMenu+.swift in Sources */,
 				DD51577E1ECC79AB00BFD5CD /* StatusItemController.swift in Sources */,
+				F4E1554C2BB5B1B8008354CD /* SettingsWindowController.swift in Sources */,
 				DD51576B1ECC78B900BFD5CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

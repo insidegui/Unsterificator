@@ -74,7 +74,25 @@ final class StatusItemController: NSObject {
 
         updateStatus()
     }
-    
+
+    // MARK: - Settings Window
+
+    private var settingsController: NSWindowController?
+
+    func showSettingsWindow() {
+        if let settingsController {
+            settingsController.showWindow(nil)
+            return
+        }
+
+        let wc = SettingsWindowController()
+        wc.onClose { [weak self] _ in
+            self?.settingsController = nil
+        }
+        self.settingsController = wc
+        wc.showWindow(nil)
+    }
+
 }
 
 fileprivate extension NSEvent {
@@ -92,8 +110,8 @@ extension StatusItemController: StatusItemMenuActions {
         print("Toggle launch at login")
     }
     
-    func configureKeyboardShortcut(_ sender: NSMenuItem) {
-        print("Configure shortcut")
+    func presentSettings(_ sender: NSMenuItem) {
+        showSettingsWindow()
     }
     
     func terminate(_ sender: NSMenuItem) {
