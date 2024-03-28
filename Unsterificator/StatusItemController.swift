@@ -30,13 +30,8 @@ final class StatusItemController: NSObject {
         }
     }
 
-    private lazy var menu: NSMenu = {
-        let m = NSMenu(title: "Unsterificator")
-
-        let item = m.addItem(withTitle: "Quit", action: #selector(NSApplication.terminate), keyEquivalent: "")
-        item.target = NSApp
-
-        return m
+    private lazy var menu: StatusItemMenu = {
+        StatusItemMenu(actions: self)
     }()
     
     func install() {
@@ -90,4 +85,18 @@ fileprivate extension NSEvent {
                || type == .rightMouseDown
     }
 
+}
+
+extension StatusItemController: StatusItemMenuActions {
+    func toggleLaunchAtLogin(_ sender: NSMenuItem) {
+        print("Toggle launch at login")
+    }
+    
+    func configureKeyboardShortcut(_ sender: NSMenuItem) {
+        print("Configure shortcut")
+    }
+    
+    func terminate(_ sender: NSMenuItem) {
+        NSApp.terminate(sender)
+    }
 }

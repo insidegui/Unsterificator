@@ -13,6 +13,9 @@
 		DD51577B1ECC78F900BFD5CD /* UniversalAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD51577A1ECC78F900BFD5CD /* UniversalAccess.framework */; };
 		DD51577E1ECC79AB00BFD5CD /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD51577D1ECC79AB00BFD5CD /* StatusItemController.swift */; };
 		DD5157841ECC7BE500BFD5CD /* Unsterificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5157831ECC7BE500BFD5CD /* Unsterificator.swift */; };
+		F4E155432BB5AB40008354CD /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = F4E155422BB5AB40008354CD /* LaunchAtLogin */; };
+		F4E155462BB5AB7F008354CD /* NSMenu+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E155452BB5AB7F008354CD /* NSMenu+.swift */; };
+		F4E1554A2BB5AC47008354CD /* StatusItemMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E155492BB5AC47008354CD /* StatusItemMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,8 @@
 		DD51577C1ECC791200BFD5CD /* Unsterificator_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Unsterificator_Bridging_Header.h; sourceTree = "<group>"; };
 		DD51577D1ECC79AB00BFD5CD /* StatusItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
 		DD5157831ECC7BE500BFD5CD /* Unsterificator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unsterificator.swift; sourceTree = "<group>"; };
+		F4E155452BB5AB7F008354CD /* NSMenu+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMenu+.swift"; sourceTree = "<group>"; };
+		F4E155492BB5AC47008354CD /* StatusItemMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4E155432BB5AB40008354CD /* LaunchAtLogin in Frameworks */,
 				DD51577B1ECC78F900BFD5CD /* UniversalAccess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,9 +111,19 @@
 		DD5157821ECC79C300BFD5CD /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F4E155442BB5AB76008354CD /* Components */,
 				DD51577D1ECC79AB00BFD5CD /* StatusItemController.swift */,
+				F4E155492BB5AC47008354CD /* StatusItemMenu.swift */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		F4E155442BB5AB76008354CD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F4E155452BB5AB7F008354CD /* NSMenu+.swift */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +142,9 @@
 			dependencies = (
 			);
 			name = Unsterificator;
+			packageProductDependencies = (
+				F4E155422BB5AB40008354CD /* LaunchAtLogin */,
+			);
 			productName = Unsterificator;
 			productReference = DD5157671ECC78B900BFD5CD /* Unsterificator.app */;
 			productType = "com.apple.product-type.application";
@@ -157,6 +176,9 @@
 				Base,
 			);
 			mainGroup = DD51575E1ECC78B900BFD5CD;
+			packageReferences = (
+				F4E155412BB5AB40008354CD /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
+			);
 			productRefGroup = DD5157681ECC78B900BFD5CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -184,6 +206,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD5157841ECC7BE500BFD5CD /* Unsterificator.swift in Sources */,
+				F4E1554A2BB5AC47008354CD /* StatusItemMenu.swift in Sources */,
+				F4E155462BB5AB7F008354CD /* NSMenu+.swift in Sources */,
 				DD51577E1ECC79AB00BFD5CD /* StatusItemController.swift in Sources */,
 				DD51576B1ECC78B900BFD5CD /* AppDelegate.swift in Sources */,
 			);
@@ -386,6 +410,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F4E155412BB5AB40008354CD /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/davedelong/LaunchAtLogin.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F4E155422BB5AB40008354CD /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4E155412BB5AB40008354CD /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DD51575F1ECC78B900BFD5CD /* Project object */;
 }
