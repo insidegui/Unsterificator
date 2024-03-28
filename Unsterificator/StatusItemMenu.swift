@@ -1,7 +1,6 @@
 import Cocoa
 
 protocol StatusItemMenuActions {
-    func toggleLaunchAtLogin(_ sender: NSMenuItem)
     func presentSettings(_ sender: NSMenuItem)
     func terminate(_ sender: NSMenuItem)
 }
@@ -15,7 +14,6 @@ final class StatusItemMenu: NSMenu {
         
         super.init(title: "Unsterificator")
 
-        addItem(withTitle: "Launch At Login", target: self, action: #selector(toggleLaunchAtLogin))
         addItem(withTitle: "Settings…", target: self, action: #selector(configureKeyboardShortcut))
         
         addSeparator()
@@ -25,14 +23,6 @@ final class StatusItemMenu: NSMenu {
 
     required init(coder: NSCoder) {
         fatalError()
-    }
-
-    @objc private func toggleLaunchAtLogin(_ sender: Any?) {
-        guard let sender = sender as? NSMenuItem else {
-            assertionFailure("Expected menu item action sender to me NSMenuItem")
-            return
-        }
-        actions.toggleLaunchAtLogin(sender)
     }
     
     @objc private func configureKeyboardShortcut(_ sender: Any?) {

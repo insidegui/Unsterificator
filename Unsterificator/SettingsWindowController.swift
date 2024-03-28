@@ -1,5 +1,6 @@
 import SwiftUI
 import LaunchAtLogin
+import KeyboardShortcuts
 
 final class SettingsWindowController: NSWindowController, NSWindowDelegate {
     convenience init() {
@@ -36,12 +37,17 @@ final class SettingsWindowController: NSWindowController, NSWindowDelegate {
     }
 }
 
+extension KeyboardShortcuts.Name {
+    static let toggleMonoAudio = Self("toggleMonoAudio")
+}
+
 struct SettingsScreen: View {
     @ObservedObject private var launchAtLogin = LaunchAtLogin.observable
 
     var body: some View {
         Form {
             Toggle("Launch at login", isOn: $launchAtLogin.isEnabled)
+            KeyboardShortcuts.Recorder("Keyboard Shortcut", name: .toggleMonoAudio)
         }
         .formStyle(.grouped)
         .frame(minWidth: 200, maxWidth: .infinity, minHeight: 200, maxHeight: .infinity)

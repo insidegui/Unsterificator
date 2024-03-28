@@ -17,6 +17,7 @@
 		F4E155462BB5AB7F008354CD /* NSMenu+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E155452BB5AB7F008354CD /* NSMenu+.swift */; };
 		F4E1554A2BB5AC47008354CD /* StatusItemMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E155492BB5AC47008354CD /* StatusItemMenu.swift */; };
 		F4E1554C2BB5B1B8008354CD /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E1554B2BB5B1B8008354CD /* SettingsWindowController.swift */; };
+		F4E155512BB5B445008354CD /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = F4E155502BB5B445008354CD /* KeyboardShortcuts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			files = (
 				F4E155432BB5AB40008354CD /* LaunchAtLogin in Frameworks */,
 				DD51577B1ECC78F900BFD5CD /* UniversalAccess.framework in Frameworks */,
+				F4E155512BB5B445008354CD /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +149,7 @@
 			name = Unsterificator;
 			packageProductDependencies = (
 				F4E155422BB5AB40008354CD /* LaunchAtLogin */,
+				F4E155502BB5B445008354CD /* KeyboardShortcuts */,
 			);
 			productName = Unsterificator;
 			productReference = DD5157671ECC78B900BFD5CD /* Unsterificator.app */;
@@ -181,6 +184,7 @@
 			mainGroup = DD51575E1ECC78B900BFD5CD;
 			packageReferences = (
 				F4E155412BB5AB40008354CD /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
+				F4E1554F2BB5B445008354CD /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
 			);
 			productRefGroup = DD5157681ECC78B900BFD5CD /* Products */;
 			projectDirPath = "";
@@ -426,6 +430,14 @@
 				kind = branch;
 			};
 		};
+		F4E1554F2BB5B445008354CD /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -433,6 +445,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F4E155412BB5AB40008354CD /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
 			productName = LaunchAtLogin;
+		};
+		F4E155502BB5B445008354CD /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4E1554F2BB5B445008354CD /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -7,9 +7,10 @@
 //
 
 import Cocoa
+import KeyboardShortcuts
 
 final class StatusItemController: NSObject {
-    
+
     private lazy var unsterificator: Unsterificator = Unsterificator()
     
     private var statusItem: NSStatusItem!
@@ -35,15 +36,27 @@ final class StatusItemController: NSObject {
     }()
 
     func install() {
+        menu.delegate = self
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-        
-        statusItem.button?.target = self
-        statusItem.button?.action = #selector(menuIconClicked)
+
+        guard let button = statusItem.button else {
+            assertionFailure("NSStatusItem has no button!")
+            return
+        }
+
+        button.target = self
+        button.action = #selector(menuIconClicked)
+        button.sendAction(on: [.leftMouseUp, .rightMouseUp])
 
         updateStatus()
         
         unsterificator.settingDidChangeExternally = { [weak self] in
             self?.updateStatus()
+        }
+
+        KeyboardShortcuts.onKeyUp(for: .toggleMonoAudio) { [weak self] in
+            guard let self else { return }
+            shortcutToggle()
         }
     }
     
@@ -75,6 +88,18 @@ final class StatusItemController: NSObject {
         updateStatus()
     }
 
+    private func shortcutToggle() {
+        flashStatusItem()
+        toggle(nil)
+    }
+
+    private func flashStatusItem() {
+        statusItem.button?.isHighlighted = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.statusItem.button?.isHighlighted = false
+        }
+    }
+
     // MARK: - Settings Window
 
     private var settingsController: NSWindowController?
@@ -100,18 +125,24 @@ fileprivate extension NSEvent {
     var shouldShowMenu: Bool {
         return modifierFlags.contains(.control)
                || modifierFlags.contains(.option)
-               || type == .rightMouseDown
+               || type == .rightMouseUp
     }
 
 }
 
-extension StatusItemController: StatusItemMenuActions {
-    func toggleLaunchAtLogin(_ sender: NSMenuItem) {
-        print("Toggle launch at login")
+extension StatusItemController: StatusItemMenuActions, NSMenuDelegate {
+    func menuDidClose(_ menu: NSMenu) {
+        print("menuDidClose")
     }
-    
+
     func presentSettings(_ sender: NSMenuItem) {
-        showSettingsWindow()
+        print("presentSettings called in mode \(String(describing: RunLoop.current.currentMode))")
+
+        sender.menu!.cancelTrackingWithoutAnimation()
+
+        RunLoop.current.perform(inModes: [.default]) {
+            self.showSettingsWindow()
+        }
     }
     
     func terminate(_ sender: NSMenuItem) {
